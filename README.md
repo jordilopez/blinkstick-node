@@ -7,6 +7,19 @@ What is BlinkStick? It's a smart USB-controlled LED device. More info about it h
 
 [http://www.blinkstick.com](http://www.blinkstick.com)
 
+## Note
+
+This fixes the following errors when running `npm install` on _Mac_:
+
+```
+node-pre-gyp ERR! Tried to download(404): https://tessel-builds.s3-us-west-2.amazonaws.com/pre-gyp/usb/v1.1.1/usb_bindings-v1.1.1-node-v59-darwin-x64.tar.gz
+node-pre-gyp ERR! Pre-built binaries not found for usb@1.1.1 and node@9.2.0 (node-v59 ABI, unknown) (falling back to source compile with node-gyp)
+```
+
+Upgrading `usb` package to its latest version prevents building it. Just run
+`npm install`.
+
+
 ## Resources
 
 * [Code repository on GitHub](https://github.com/arvydas/blinkstick-node)
